@@ -28,7 +28,11 @@ const newQue = document.querySelector("#new-question");
         if (optionText === data.answer) {
             clickedOption.classList.remove("bg-primary-subtle");
             clickedOption.style.backgroundColor = "MediumSeaGreen";
-             setTimeout(() => {
+            opt1.style.pointerEvents = "none";
+            opt2.style.pointerEvents = "none";
+            opt3.style.pointerEvents = "none";
+            opt4.style.pointerEvents = "none";
+            setTimeout(() => {
                 location.reload();
             }, 2000); 
         } else {
