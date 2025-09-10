@@ -18,16 +18,19 @@ const newQue = document.querySelector("#new-question");
 
 
     que.innerText = data.question;
-    opt1.innerText = opt1.innerText + data.options[0]
-    opt2.innerText = opt2.innerText + data.options[1]
-    opt3.innerText = opt3.innerText + data.options[2]
-    opt4.innerText = opt4.innerText + data.options[3]
+    opt1.innerText = "A: " + data.options[0]
+    opt2.innerText = "B: " + data.options[1]
+    opt3.innerText = "C: " + data.options[2]
+    opt4.innerText = "D: " + data.options[3]
     explain.innerText = data.explanation;
 
     function checkAnswer(clickedOption, optionText) {
         if (optionText === data.answer) {
             clickedOption.classList.remove("bg-primary-subtle");
             clickedOption.style.backgroundColor = "MediumSeaGreen";
+             setTimeout(() => {
+                location.reload();
+            }, 2000); 
         } else {
             clickedOption.classList.remove("bg-primary-subtle");
             clickedOption.style.backgroundColor = "Tomato";
@@ -43,6 +46,9 @@ const newQue = document.querySelector("#new-question");
         event.preventDefault();
         location.reload();
     });
+
+
+    // newQue.addEventListener("click", ()=>getQuiz());
 
 })();
 
