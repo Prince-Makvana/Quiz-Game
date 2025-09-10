@@ -7,6 +7,7 @@ const opt3 = document.querySelector("#option3");
 const opt4 = document.querySelector("#option4");
 const explain = document.querySelector("#explanation");
 const newQue = document.querySelector("#new-question");
+const ans = document.querySelector("#answer");
 
 
 
@@ -32,9 +33,10 @@ const newQue = document.querySelector("#new-question");
             opt2.style.pointerEvents = "none";
             opt3.style.pointerEvents = "none";
             opt4.style.pointerEvents = "none";
-            setTimeout(() => {
-                location.reload();
-            }, 2000); 
+            ans.classList.remove("disabled")
+            // setTimeout(() => {
+            //     location.reload();
+            // }, 2000); 
         } else {
             clickedOption.classList.remove("bg-primary-subtle");
             clickedOption.style.backgroundColor = "Tomato";
